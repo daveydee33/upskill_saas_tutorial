@@ -17,10 +17,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+// Typography styles
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
+// Background gradient
 .navbar, .home-callout {
   // Gradient provided by uigradients.com
   background: #43cea2; /* fallback for old browsers */
@@ -28,31 +30,25 @@ h1, h2, h3 {
   background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+
+// Navbar styles
 .navbar {
   border: none;
 }
 
-.navbar-default .navbar-brand {
-  color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-  // the DeveMatch logo, hovered.
-  color: white;
-  opacity: 0.75;
-}
-
+// Navbar styles
+// the DevMatch logo, and the About(etc) links.
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  // to target the About, links in nav.
   color: white;
+  &:hover {
+    color: white;
+    opacity: 0.75;
+  }
 }
 
-.navbar-default .navbar-nav > li > a:hover{
-  // to target the About, links in nav, hover state.
-  color: white;
-  opacity: 0.75;
-}
 
+// Homepage styles
 .home-callout {
   color: white;
   margin-top: -20px;
