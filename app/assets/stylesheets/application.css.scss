@@ -55,6 +55,20 @@ h1, h2, h3 {
   }
 }
 
+// The navbar styles of the option drop-down when screen is in mobile mode.
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+// styles for that hamburger/sandwhich option in top-right.  background color is green from background far right of gradient
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, 
+  &:focus {
+    background-color: #43cea2;
+  }
+}
+
 
 // Homepage styles
 .home-callout {
