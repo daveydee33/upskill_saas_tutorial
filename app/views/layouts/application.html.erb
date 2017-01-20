@@ -32,9 +32,16 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-     
+   
+    <!-- we moved this here instead of the contacts/new.html.erb page so that if in the future we decide to redirect to some other page(s) other than back to the same form page, we still display the message at the top of the page -->
+    <div class="container">
+      <% flash.each do |type, msg| %>  
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+      <!-- |key, value| eg.  flash[:success] = "Message sent."  (contacts_controller.rb) -->
+    </div>
     
-      <%= yield %>
+    <%= yield %>
 
   </body>
 </html>

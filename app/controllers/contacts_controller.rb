@@ -9,7 +9,9 @@ class ContactsController < ApplicationController
       flash[:success] = "Message sent."
       redirect_to new_contact_path
     else
-      flash[:error] = @contact.errors.full_messages.join(", ")
+      # calling this one danger so that we can use the variable name for the 
+      # bootstrap class on the alert "alert-danger" in 
+      flash[:danger] = @contact.errors.full_messages.join(", ")
       redirect_to new_contact_path
     end
   end
