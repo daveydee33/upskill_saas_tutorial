@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get 'about', to: 'pages#about'
-  #get 'blah', to: 'pages#this_is_a_test'
   resources :contacts
+  get 'contact-us', to: 'contacts#new'  # this is so that we don't have the old url of .../controller/method.  eg) www..com/contacts/new
 end
